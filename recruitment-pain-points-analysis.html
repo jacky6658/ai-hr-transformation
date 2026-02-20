@@ -223,34 +223,124 @@
             text-align: center;
         }
 
+        /* 表格容器（手機橫向滾動） */
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 30px 0;
+        }
+
         @media (max-width: 768px) {
             body {
                 padding: 10px;
             }
 
             header {
-                padding: 40px 20px;
+                padding: 30px 15px;
             }
 
             h1 {
-                font-size: 1.8em;
+                font-size: 1.5em;
+            }
+
+            .subtitle {
+                font-size: 1em;
+            }
+
+            .date {
+                font-size: 0.85em;
             }
 
             main {
-                padding: 20px;
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            h3 {
+                font-size: 1.2em;
+            }
+
+            section {
+                margin-bottom: 30px;
             }
 
             .stat-grid {
                 grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .stat-card {
+                padding: 20px;
+            }
+
+            .stat-number {
+                font-size: 2.5em;
+            }
+
+            .highlight-box {
+                padding: 15px;
+                font-size: 0.95em;
             }
 
             .pain-point-table {
-                font-size: 0.85em;
+                font-size: 0.75em;
+                min-width: 600px;
             }
 
             .pain-point-table th,
             .pain-point-table td {
-                padding: 10px 8px;
+                padding: 8px 6px;
+            }
+
+            .value-high,
+            .value-medium,
+            .value-low {
+                padding: 3px 10px;
+                font-size: 0.8em;
+            }
+
+            .star-rating {
+                font-size: 1em;
+            }
+
+            ul li {
+                padding: 8px 0 8px 25px;
+                font-size: 0.95em;
+            }
+
+            footer {
+                padding: 20px 15px;
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.3em;
+            }
+
+            .subtitle {
+                font-size: 0.9em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            h3 {
+                font-size: 1.1em;
+            }
+
+            .stat-number {
+                font-size: 2em;
+            }
+
+            .pain-point-table {
+                font-size: 0.7em;
             }
         }
     </style>
@@ -316,7 +406,7 @@
                 <p>基于 <strong>嚴重度 × 付費意愿 × 頻率 × 市场規模</strong> 四維模型評估</p>
                 
                 <h3>✅ 高價值痛點（必須解決）</h3>
-                <table class="pain-point-table">
+                <div class="table-wrapper"><table class="pain-point-table">
                     <thead>
                         <tr>
                             <th>痛點</th>
@@ -369,10 +459,10 @@
                             <td>• 獵頭費用：年薪 25-33%<br>• C-level 招聘需 8-12 個月</td>
                         </tr>
                     </tbody>
-                </table>
+                </table></div>
 
                 <h3>⚠️ 中等價值痛點（视情况解決）</h3>
-                <table class="pain-point-table">
+                <div class="table-wrapper"><table class="pain-point-table">
                     <thead>
                         <tr>
                             <th>痛點</th>
@@ -409,10 +499,10 @@
                             <td>• 痛但<strong>可用 Google Calendar</strong><br>• 有免費替代方案</td>
                         </tr>
                     </tbody>
-                </table>
+                </table></div>
 
                 <h3>❌ 低價值痛點（不建議解決）</h3>
-                <table class="pain-point-table">
+                <div class="table-wrapper"><table class="pain-point-table">
                     <thead>
                         <tr>
                             <th>痛點</th>
@@ -457,7 +547,7 @@
                             <td><strong>不是招聘核心痛點</strong></td>
                         </tr>
                     </tbody>
-                </table>
+                </table></div>
             </section>
 
             <!-- 痛點驗證方法 -->
@@ -496,7 +586,7 @@
                 </div>
 
                 <h3>方法 3：痛點頻率 × 嚴重度矩阵</h3>
-                <table class="pain-point-table">
+                <div class="table-wrapper"><table class="pain-point-table">
                     <thead>
                         <tr>
                             <th>痛點</th>
@@ -531,7 +621,7 @@
                             <td><span class="value-low">⭐⭐ 低</span></td>
                         </tr>
                     </tbody>
-                </table>
+                </table></div>
             </section>
 
             <!-- 市场机會分析 -->
@@ -553,7 +643,7 @@
                 </div>
 
                 <h3>競品痛點分析</h3>
-                <table class="pain-point-table">
+                <div class="table-wrapper"><table class="pain-point-table">
                     <thead>
                         <tr>
                             <th>競品</th>
@@ -593,7 +683,7 @@
                             <td>AI 加速搜寻（1-2 周）</td>
                         </tr>
                     </tbody>
-                </table>
+                </table></div>
             </section>
 
             <!-- 產品建議 -->
